@@ -14,3 +14,19 @@ footer {
 	font-size:11;
 	font-family:Verdana;
 }
+
+/*SELECTION CRITERIA*/
+
+button {
+	margin-top: 20px;
+}
+
+#where {
+	margin-top: 25px;
+}
+
+#distance {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
