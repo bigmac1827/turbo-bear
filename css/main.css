@@ -1,6 +1,5 @@
 footer {
 	text-align: center;
-	position: absolute;
 	bottom: 0;
 	width: 100%;
 	height: 60px;
@@ -17,6 +16,10 @@ footer {
 
 #myCarousel {
 	height: 500px;
+}
+
+.carousel-caption {
+	position: initial;
 }
 
 /*SELECTION CRITERIA*/
