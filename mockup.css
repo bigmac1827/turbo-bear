@@ -1,0 +1,42 @@
+body {
+	background-color: ivory;
+}
+
+.brand {
+	text-align: center;
+	font-family: OpenSans;
+	font-size: 3em;
+}
+
+.park {
+	text-decoration: none;
+	padding: 1em;
+	background-color: lightblue;
+	border-radius: 20px;
+	display: inline-block;
+	margin: 1em;
+	width: 85%;
+	text-align: center;
+	font-size: 1em;
+}
+
+.dog {
+	text-decoration: none;
+	padding: 1em;
+	background-color: lightgreen;
+	border-radius: 20px;
+	display: inline-block;
+	margin: 1em;
+	width: 85%;
+	text-align: center;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+img {
+	width: 100%;
+}
