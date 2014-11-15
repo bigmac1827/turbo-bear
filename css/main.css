@@ -15,6 +15,10 @@ footer {
 	font-family:Verdana;
 }
 
+#myCarousel {
+	height: 500px;
+}
+
 /*SELECTION CRITERIA*/
 
 button {
