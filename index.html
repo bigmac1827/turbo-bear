@@ -5,6 +5,7 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="favficon" href="img/dog-paw.ico">
 </head>
 <body>
  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -23,20 +24,22 @@
     <!-- Collect the nav links, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">About Us</a></li>
-        <li><a href="#">Add</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#addpark">Add Park</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Current Locations <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Boston</a></li>
-            <li><a href="#">Portland</a></li>
-            <li><a href="#">Lorem</a></li>
+            <li><a href="#">NW Portland</a></li>
+            <li><a href="#">SW Portland</a></li>
+            <li><a href="#">NE Portland</a></li>
+            <li><a href="#">SE Portland</a></li>
             <li class="divider"></li>
-            <li><a href="#">amet</a></li>
+            <li><a href="#">Washington County</a></li>
             <li class="divider"></li>
-            <li><a href="#">about that</a></li>
+            <li><a href="#">Clackamas County</a></li>
           </ul>
         </li>
+        <li><a href='#wherego'><span class='glyphicon glyphicon-search'> </span> Search </a>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li id='weather'>
@@ -106,58 +109,43 @@
         <span class="sr-only">Next</span>
       </a>
     </div><!-- /.carousel -->
-
   </div>
   <!-- Jumbotron here -->
-  <div class="row">
-    <div class="col-md-4">
-      <p>Need to get out of the house for a breath of fresh air?</p>
-
-      <p>Need to get someone ELSE out of the house? To run around, climb a play structure, roll around in the grass, and/or sniff some butts??</p>
-
-      <p>Grab the kids, human and otherwise, and take a walk in the park... and pick the best park for today's adventure here!!</p>
-      <form role="form">
-   <div class="form-group">
-      <div id="where">
-      <label for="name">Where do you want to be?</label>
+  <div class="modal fade" id='addpark'>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title">Add A Park</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+        <label for='aName'>Park Name: &nbsp;</label><br />
+        <input type="text" id='aName'/> <br /> <br />
+        <label for="aLocation">Where is the park located?</label>
         <select class="form-control">
-           <option>Select your destination quarter</option>
+           <option>Select location</option>
            <option>NW Portland</option>
            <option>NE Portland</option>
            <option>SE Portland</option>
            <option>SW Portland</option>
+           <option>Washington County</option>
+           <option>Clackamas County</option>
         </select>
+       
+
+        </form>
       </div>
-      <div id="distance">
-      <label for="name">How far afield?</label>
-        <select class="form-control">
-           <option>Max distance away</option>
-           <option>3 mi</option>
-           <option>5 mi</option>
-           <option>8 mi</option>
-           <option>10 mi</option>
-        </select>
-        </div>
-   </div id="who">
-        <label for="name">Who are you taking with you?</label>
-             <div>
-             <label class="checkbox-inline">
-                <input type="radio" name="optionsRadiosinline" id="optionsRadios3" 
-                   value="option1" checked> Dog
-             </label>
-             <label class="checkbox-inline">
-                <input type="radio" name="optionsRadiosinline" id="optionsRadios4" 
-                   value="option2"> Kid
-             </label>
-             <label class="checkbox-inline">
-                <input type="radio" name="optionsRadiosinline" id="optionsRadios4" 
-                   value="option2"> Dog AND Kid!
-             </label>
-             </div>
-    <div>
-         <button type="submit" class="btn btn-default">Your best parks choices  are...</button>
-    </div>
-      </form>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+  <div class="row">
+    <div class="col-md-4">
+      Puppy kitty ipsum dolor sit good dog fetch harness warm bird scratcher ball tigger. Fluffy bird food Rover nap stick teeth leash parakeet slobbery. Chirp tooth whiskers licks play dead aquatic lazy dog head crate speak litter drool smooshy left paw slobber bird food cat pet gate pet supplies. Heel teeth walk bird meow leash aquarium bed lazy cat. Cat nap bed scratcher aquarium good boy litter canary water dog.
     </div>
     <div class="col-md-4">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia reprehenderit quas, ratione libero, iure autem esse iusto laborum soluta laboriosam. Commodi, asperiores quisquam? Praesentium fugiat nam molestiae veritatis cumque laboriosam.
@@ -165,6 +153,100 @@
     <div class="col-md-4">
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas incidunt neque esse quis ea minus eos et. Maiores consequuntur quod repellendus, delectus ullam magni harum distinctio temporibus, excepturi labore quisquam!
      </div>
+  </div>
+  </div> <!-- class='container'> -->
+  <div class='row' id='wherego'>
+    <div class="banner" >
+    <p>WHERE DO YOU WANT TO GO?</p></div>
+  </div>
+  <div class='container'>
+  <div class="row">
+    <div class="col-md-4">
+      <p>Need to get out of the house for a breath of fresh air?</p>
+
+      <p>Need to get someone ELSE out of the house? To run around, climb a play structure, roll around in the grass, and/or sniff some butts??</p>
+
+      <p>Grab the kids, human and otherwise, and take a walk in the park... and pick the best park for today's adventure here!!</p>
+    </div>
+    <div class="col-md-4">
+      <form role="form">
+         <div class="form-group">
+            <div id="where">
+            <label for="name">Where do you want to be?</label>
+              <select class="form-control">
+                 <option>Select your destination quarter</option>
+                 <option>NW Portland</option>
+                 <option>NE Portland</option>
+                 <option>SE Portland</option>
+                 <option>SW Portland</option>
+              </select>
+            </div>
+            <div id="distance">
+            <label for="name">How far afield?</label>
+              <select class="form-control">
+                 <option>Max distance away</option>
+                 <option>3 mi</option>
+                 <option>5 mi</option>
+                 <option>8 mi</option>
+                 <option>10 mi</option>
+              </select>
+              </div>
+         </div id="who">
+              <label for="name">Who are you taking with you?</label>
+                   <div>
+                   <label class="checkbox-inline">
+                      <input type="radio" name="optionsRadiosinline" id="optionsRadios3" 
+                         value="option1" checked> Dog
+                   </label>
+                   <label class="checkbox-inline">
+                      <input type="radio" name="optionsRadiosinline" id="optionsRadios4" 
+                         value="option2"> Kid
+                   </label>
+                   <label class="checkbox-inline">
+                      <input type="radio" name="optionsRadiosinline" id="optionsRadios4" 
+                         value="option2"> Dog AND Kid!
+                   </label>
+                   </div>
+         <div>
+         <button type="submit" class="btn btn-default">Your best parks choices  are...</button>
+         </div>
+      </form>
+    </div>
+    <div class="col-md-4">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas incidunt neque esse quis ea minus eos et. Maiores consequuntur quod repellendus, delectus ullam magni harum distinctio temporibus, excepturi labore quisquam!
+     </div>
+  </div>
+  <div class='row' id='wcounty'>
+    <div class="col-md-12" id="hondo" class='img-responsive'>
+   <img src='img/Hondo_Dog_Park_cropped.jpg' alt='' id='hondo'\> 
+   <p class='county' class='lead'>Washington County</p>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+    <table>
+      <tr>
+        <td class='tbLabel'>Location: &nbsp;</td>
+        <td><span class="street-address">4499 NW 229th Ave.</span></td>
+      </tr>
+      <tr>
+        <td class='tbLabel'>Type of Park:  &nbsp;</td>
+        <td>Dedicated</td>
+      </tr>
+      <tr>
+        <td class='tbLabel'>Small Dog Section:  &nbsp;</td>
+        <td>Yes</td>
+      </tr>
+      <tr>
+        <td class='tbLabel'>Size:  &nbsp;</td>
+        <td>3.75 acres</td>
+      </tr>
+    </table>
+     
+    </div>
+    <div class='col-md-6'>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.8627235701624!2d-122.91015099999998!3d45.553086999999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950599f0d84ab5%3A0xf085a0b09638aa22!2sHondo+Dog+Park!5e0!3m2!1sen!2sus!4v1416192221553" width="400" height="300" frameborder="0" style="border:0"></iframe>
+    </div>
   </div>
 </div> 
 <!--- Form goes here maybe? -->
