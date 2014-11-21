@@ -30,11 +30,12 @@
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Current Locations <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">NW Portland</a></li>
-            <li><a href="#">SW Portland</a></li>
+            <li onclick="changeText(1)"><a href="#parkframe">SW Portland</a></li>
             <li><a href="#">NE Portland</a></li>
             <li><a href="#">SE Portland</a></li>
             <li class="divider"></li>
-            <li><a href="#">Washington County</a></li>
+            <li onclick="changeText(0)"><a href="#parkframe">Washington County</a></li>
+            <!-- <li onclick="changeText(0)"><a href="#">Washington County</a></li> -->
             <li class="divider"></li>
             <li><a href="#">Clackamas County</a></li>
           </ul>
@@ -119,7 +120,7 @@
         <h4 class="modal-title">Add A Park</h4>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="http://form-echo.herokuapp.com/form-echo" method='post'>
         <label for='aName'>Park Name: &nbsp;</label><br />
         <input type="text" id='aName'/> <br /> <br />
         <label for="aLocation">Where is the park located?</label>
@@ -131,10 +132,13 @@
            <option>SW Portland</option>
            <option>Washington County</option>
            <option>Clackamas County</option>
-        </select>
-       
-
-        </form>
+        </select> <br />
+        <label for='asmalldog'>Is there a small dog section?</label> <br/>
+        <input type='text' id='asmalldog'/><br/> <br /> 
+        <label for='aSize'>What is the park size?</label> <br /> 
+        <input type='text' id'aSize'>
+       <!--  <input type='submit' value='submit' /> -->
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -224,24 +228,29 @@
    <p class='county' class='lead'>Washington County</p>
     </div>
   </div>
-  <div class='row'>
+  <div class='row' id="parkframe">
     <div class='col-md-6'>
     <table>
       <tr>
+        <td class='tbLabel'>Park Name: &nbsp;</td>
+        <td id='parkname'></td>
+      </tr>
+      <tr>
         <td class='tbLabel'>Location: &nbsp;</td>
-        <td><span class="street-address">4499 NW 229th Ave.</span></td>
+        <td id='location'></td>
+      </tr>
       </tr>
       <tr>
         <td class='tbLabel'>Type of Park:  &nbsp;</td>
-        <td>Dedicated</td>
+        <td id='type'></td>
       </tr>
       <tr>
         <td class='tbLabel'>Small Dog Section:  &nbsp;</td>
-        <td>Yes</td>
+        <td id='small'></td>
       </tr>
       <tr>
         <td class='tbLabel'>Size:  &nbsp;</td>
-        <td>3.75 acres</td>
+        <td id='size'></td>
       </tr>
     </table>
      
@@ -261,4 +270,5 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src='js/main.js'></script>
 </body>
