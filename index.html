@@ -169,42 +169,44 @@
       <p>Grab the kids, human and otherwise, and take a walk in the park... and pick the best park for today's adventure here!!</p>
     </div>
     <div class="col-md-4">
-      <form role="form">
+      <form role="form" action="http://form-echo.herokuapp.com/form-echo" method="post"> 
          <div class="form-group">
             <div id="where">
             <label for="name">Where do you want to be?</label>
-              <select class="form-control">
+              <select class="form-control" name="Where">
                  <option>Select your destination quarter</option>
-                 <option>NW Portland</option>
-                 <option>NE Portland</option>
-                 <option>SE Portland</option>
-                 <option>SW Portland</option>
+                 <option value="NW PDX">NW Portland</option>
+                 <option value="NE PDX">NE Portland</option>
+                 <option value="SE PDX">SE Portland</option>
+                 <option value="SW PDX">SW Portland</option>
+                 <option value="WA County">Washington County</option>
+                 <option value="Clack County">Clackamas County</option>
               </select>
             </div>
             <div id="distance">
             <label for="name">How far afield?</label>
-              <select class="form-control">
+              <select class="form-control" name="Radius">
                  <option>Max distance away</option>
-                 <option>3 mi</option>
-                 <option>5 mi</option>
-                 <option>8 mi</option>
-                 <option>10 mi</option>
+                 <option value="3 mi">3 mi</option>
+                 <option value="5 mi">5 mi</option>
+                 <option value="8 mi">8 mi</option>
+                 <option value="10 mi">10 mi</option>
               </select>
               </div>
          </div id="who">
               <label for="name">Who are you taking with you?</label>
                    <div>
                    <label class="checkbox-inline">
-                      <input type="radio" name="optionsRadiosinline" id="optionsRadios3" 
-                         value="option1" checked> Dog
+                      <input type="radio" name="Who" id="optionsRadios3" 
+                         value="Dog" checked> Dog
                    </label>
                    <label class="checkbox-inline">
-                      <input type="radio" name="optionsRadiosinline" id="optionsRadios4" 
-                         value="option2"> Kid
+                      <input type="radio" name="Who" id="optionsRadios4" 
+                         value="Kid"> Kid
                    </label>
                    <label class="checkbox-inline">
-                      <input type="radio" name="optionsRadiosinline" id="optionsRadios4" 
-                         value="option2"> Dog AND Kid!
+                      <input type="radio" name="Who" id="optionsRadios4" 
+                         value="Dog+Kid"> Dog AND Kid!
                    </label>
                    </div>
          <div>

@@ -12,6 +12,9 @@
 
 #myCarousel {
 	height: 500px;
+	background-image: url("../img/shibainu.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 .carousel-caption {
