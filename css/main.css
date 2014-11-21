@@ -28,20 +28,47 @@ header {
 	position: initial;
 }
 
-/*SELECTION CRITERIA*/
+/*FORMS*/
 
 button {
 	margin-top: 20px;
 }
 
-#where {
-	/*margin-top: 25px;*/
+.glyphicon-tree-conifer {
+	font-size: 3em;
+	display: block;
+	text-align: center;
+	color: #3a87ad;
+	margin-bottom: 20px;
+}
+
+.glyphicon-tree-deciduous {
+	font-size: 3em;
+	display: block;
+	text-align: center;
+	color: #3a87ad;
+	margin-bottom: 20px;
+}
+
+.glyphicon-pencil {
+	font-size: 3em;
+	display: block;
+	text-align: center;
+	color: #3a87ad;
+	margin-bottom: 20px;
 }
 
 #distance {
 	margin-top: 25px;
-	margin-bottom: 25px;
+	margin-bottom: 35px;
 }
+
+#feedback {
+	margin-top: 25px;
+	margin-bottom: 0px;
+}
+
+
 
 .banner {
 	background-color: #333;

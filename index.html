@@ -74,7 +74,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h1>Dog Day Afternoon!</h1>
-              <p>An app for dogs and the people that love them.</p>
+              <p class="lead">An app for dogs and the people that love them.</p>
               <div class="btn-group">
                 <button class="btn btn-default btn-lg" href="#"> Download for Android</button>
                 <button class="btn btn-default btn-lg" href="#"> Download for iOS</button></p>
@@ -87,7 +87,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h2>Do what you love with the dog that you love</h2>
-              <p>Puppy kitty ipsum dolor sit good dog teeth house train bedding ferret play walk kitty head. Maine Coon Cat dog polydactyl Buddy dog house feathers speak Rover litter box bird groom smooshy. Tigger Buddy litter litter box run fast pet gate stripes leash.</p>
+              <p class="lead">Puppy kitty ipsum dolor sit good dog teeth house train bedding ferret play walk kitty head. Maine Coon Cat dog polydactyl Buddy dog house feathers speak Rover litter box bird groom smooshy. Tigger Buddy litter litter box run fast pet gate stripes leash.</p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
             </div>
           </div>
@@ -97,7 +97,7 @@
           <div class="container">
             <div class="carousel-caption">
               <h2>Bring your dogs, bring your neighbors' dogs.</h2> <br><h2>Bring hundreds of dogs.</h2>
-              <p>Bird dog fluffy wet nose dinnertime tuxedo throw lazy dog play dead run pet string wag tail bird brush feathers bark dog house. Bed walk kitten bird kisses stick running stripes kisses critters Spike tabby critters. Pet Gate commands toys vaccination vitamins yawn run good boy fur small animals parrot feathers. Nest yawn water dog shake speak ID tag small animals dog tabby.</p>
+              <p class="lead">Bird dog fluffy wet nose dinnertime tuxedo throw lazy dog play dead run pet string wag tail bird brush feathers bark dog house. Bed walk kitten bird kisses stick running stripes kisses critters Spike tabby critters. Pet Gate commands toys vaccination vitamins yawn run good boy fur small animals parrot feathers. Nest yawn water dog shake speak ID tag small animals dog tabby.</p>
               <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
             </div>
           </div>
@@ -168,7 +168,8 @@
   </div>
   <div class='container'>
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 hidden-xs">
+    <b class="glyphicon glyphicon-tree-deciduous"></b>
       <p>Need to get out of the house for a breath of fresh air?</p>
 
       <p>Need to get someone ELSE out of the house? To run around, climb a play structure, roll around in the grass, and/or sniff some butts??</p>
@@ -176,6 +177,7 @@
       <p>Grab the kids, human and otherwise, and take a walk in the park... and pick the best park for today's adventure here!!</p>
     </div>
     <div class="col-md-4">
+    <b class="glyphicon glyphicon-tree-conifer"></b>
       <form role="form" action="http://form-echo.herokuapp.com/form-echo" method="post"> 
          <div class="form-group">
             <div id="where">
@@ -200,34 +202,47 @@
                  <option value="10 mi">10 mi</option>
               </select>
               </div>
-         </div id="who">
-              <label for="name">Who are you taking with you?</label>
-                   <div>
-                   <label class="checkbox-inline">
-                      <input type="radio" name="Who" id="optionsRadios3" 
-                         value="Dog" checked> Dog
-                   </label>
-                   <label class="checkbox-inline">
-                      <input type="radio" name="Who" id="optionsRadios4" 
-                         value="Kid"> Kid
-                   </label>
-                   <label class="checkbox-inline">
-                      <input type="radio" name="Who" id="optionsRadios4" 
-                         value="Dog+Kid"> Dog AND Kid!
-                   </label>
-                   </div>
-         <div>
+           </div id="who">
+                <label for="name">Who are you taking with you?</label>
+                     <div>
+                     <label class="checkbox-inline">
+                        <input type="radio" name="Who" id="optionsRadios3" 
+                           value="Dog" checked> Dog
+                     </label>
+                     <label class="checkbox-inline">
+                        <input type="radio" name="Who" id="optionsRadios4" 
+                           value="Kid"> Kid
+                     </label>
+                     <label class="checkbox-inline">
+                        <input type="radio" name="Who" id="optionsRadios4" 
+                           value="Dog+Kid"> Dog AND Kid!
+                     </label>
+                     </div>
+           <div>
          <button type="submit" class="btn btn-default">Your best parks choices  are...</button>
          </div>
       </form>
     </div>
     <div class="col-md-4">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas incidunt neque esse quis ea minus eos et. Maiores consequuntur quod repellendus, delectus ullam magni harum distinctio temporibus, excepturi labore quisquam!
-     </div>
+    <b class="glyphicon glyphicon-pencil"></b>
+      <form role="form" action="http://form-echo.herokuapp.com/form-echo" method="post"> 
+         <div class="form-group">
+            <div id="visted">
+            <label for="name">Which park did you visit?</label>
+             <textarea class="form-control" rows="1" name="Park" value=""></textarea>
+            </div>
+            <div id="feedback">
+            <label for="name">What should people know about this park?</label>
+             <textarea class="form-control" rows="4" name="Feedback" value=""></textarea>
+            </div>
+         <button type="submit" class="btn btn-default">Submit</button>
+         </div>
+      </form>
+    </div>
   </div>
   <div class='row' id='wcounty'>
     <div class="col-md-12" id="hondo" class='img-responsive'>
-   <img src='img/Hondo_Dog_Park_cropped.jpg' alt='' id='hondo'\> 
+   <img src='img/Hondo_Dog_Park_cropped.jpg' alt='' id='hondo'> 
    <p class='county' class='lead'>Dog Parks</p>
     </div>
   </div>
