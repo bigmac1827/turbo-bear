@@ -1,0 +1,18 @@
+.gitignore - not to track
+
+.DS_store
+*.log
+tmp/*
+private
+
+
+project 
+
+mobile app
+download app
+invest in company
+
+mockup of mobile app
+feature on index page
+
+simplehttpserver
