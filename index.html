@@ -1,11 +1,12 @@
 <head>
   <title>Dog Day Afternoon</title>
   <!-- Latest compiled and minified CSS -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,900' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
-  <link rel="favficon" href="img/dog-paw.ico">
+  <link rel="favicon" href="img/dog-paw.ico">
 </head>
 <body>
  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -24,20 +25,20 @@
     <!-- Collect the nav links, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><a href="#">About Us</a></li>
+        <!-- <li><a href="#">About Us</a></li> -->
         <li><a href="#" data-toggle="modal" data-target="#addpark">Add Park</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Current Locations <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#">NW Portland</a></li>
-            <li onclick="changeText(1)"><a href="#parkframe">SW Portland</a></li>
-            <li><a href="#">NE Portland</a></li>
-            <li><a href="#">SE Portland</a></li>
+            <li onclick="changeText(1)"><a href="#hondo">NW Portland</a></li>
+            <li onclick="changeText(2)"><a href="#hondo">SW Portland</a></li>
+            <li onclick="changeText(3)"><a href="#hondo">NE Portland</a></li>
+            <li onclick="changeText(4)"><a href="#hondo">SE Portland</a></li>
             <li class="divider"></li>
-            <li onclick="changeText(0)"><a href="#parkframe">Washington County</a></li>
+            <li onclick="changeText(0)"><a href="#hondo">Washington County</a></li>
             <!-- <li onclick="changeText(0)"><a href="#">Washington County</a></li> -->
             <li class="divider"></li>
-            <li><a href="#">Clackamas County</a></li>
+            <li onclick="changeText(5)"><a href="#hondo">Clackamas County</a></li>
           </ul>
         </li>
         <li><a href='#wherego'><span class='glyphicon glyphicon-search'> </span> Search </a>
@@ -56,7 +57,7 @@
 </nav>
 <div class='container'>
   <div class="page-header">
-    <h1>Dog Day Afternoon</h1>
+    <header>Dog Day Afternoon</header>
   </div>
   <div class="jumbotron">
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -122,9 +123,9 @@
       <div class="modal-body">
         <form action="http://form-echo.herokuapp.com/form-echo" method='post'>
         <label for='aName'>Park Name: &nbsp;</label><br />
-        <input type="text" id='aName'/> <br /> <br />
+        <input type="text" name='Park_Name' id='aName'/> <br /> <br />
         <label for="aLocation">Where is the park located?</label>
-        <select class="form-control">
+        <select class="form-control" name='location'>
            <option>Select location</option>
            <option>NW Portland</option>
            <option>NE Portland</option>
@@ -134,16 +135,17 @@
            <option>Clackamas County</option>
         </select> <br />
         <label for='asmalldog'>Is there a small dog section?</label> <br/>
-        <input type='text' id='asmalldog'/><br/> <br /> 
+        <input type='text' name="small_dog" id='asmalldog'/><br/> <br /> 
         <label for='aSize'>What is the park size?</label> <br /> 
-        <input type='text' id'aSize'>
+        <input type='text' name="park_size"id'aSize'>
        <!--  <input type='submit' value='submit' /> -->
         
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close
+        </button>
+        <button type="submit" class="btn btn-primary">Save changes</button>
+      </form>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
@@ -225,11 +227,11 @@
   <div class='row' id='wcounty'>
     <div class="col-md-12" id="hondo" class='img-responsive'>
    <img src='img/Hondo_Dog_Park_cropped.jpg' alt='' id='hondo'\> 
-   <p class='county' class='lead'>Washington County</p>
+   <p class='county' class='lead'>Dog Parks</p>
     </div>
   </div>
-  <div class='row' id="parkframe">
-    <div class='col-md-6'>
+  <div class='row' >
+    <div class='col-md-6', id="parkframe">
     <table>
       <tr>
         <td class='tbLabel'>Park Name: &nbsp;</td>
@@ -256,7 +258,8 @@
      
     </div>
     <div class='col-md-6'>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.8627235701624!2d-122.91015099999998!3d45.553086999999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950599f0d84ab5%3A0xf085a0b09638aa22!2sHondo+Dog+Park!5e0!3m2!1sen!2sus!4v1416192221553" width="400" height="300" frameborder="0" style="border:0"></iframe>
+    <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2793.8627235701624!2d-122.91015099999998!3d45.553086999999984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54950599f0d84ab5%3A0xf085a0b09638aa22!2sHondo+Dog+Park!5e0!3m2!1sen!2sus!4v1416192221553" width="400" height="300" frameborder="0" style="border:0"></iframe> -->
+    <div id='address'></div>
     </div>
   </div>
 </div> 

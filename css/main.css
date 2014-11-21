@@ -1,7 +1,14 @@
+* {
+	font-family: raleway;
+}
 .page-header {
 	margin-top: 100px;
 }
 
+header {
+	font-size: 4em;
+	letter-spacing: 1px;
+}
 #weather {
 	color:#fff;
 	width:175px;
@@ -64,12 +71,22 @@ button {
 	bottom: 40px;
 	left: 30px;
 	color: #fff;
-	font-size: 3em;
+	font-size: 4em;
 	/*vertical-align: bottom;*/
 }
 
 .tbLabel {
 	text-align: right;
+}
+
+#parkframe {
+	padding: 10px;
+	margin-bottom: 50px;
+	background-color: lightgray;
+	border-radius: 5px;
+}
+#address {
+	margin-bottom: 50px;
 }
 
 footer {
@@ -83,13 +100,16 @@ footer {
 
 
 @media screen and (max-width: 500px) {
+	header {
+		text-align: center;
+	}
 	.county {
-		background: -webkit-linear-gradient(#fff, #333);
+		/*background: -webkit-linear-gradient(#fff, #333);
 		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
+		-webkit-text-fill-color: transparent;*/
 		font-size: 1.5em;
-		left: 48%;
-		/*color: #fff #333;*/
+		left: 65%;
+		color: #333;
 		bottom: 20px;
 		}
 
