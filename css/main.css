@@ -68,8 +68,6 @@ button {
 	margin-bottom: 0px;
 }
 
-
-
 .banner {
 	background-color: #333;
 	margin: 20px 0;
@@ -147,3 +145,17 @@ footer {
 	vertical-align: middle;
 	}
 }
+
+  	iframe {
+  		margin-left: 5%;
+  		margin-right: 5%;
+  		width:90%;
+  		height: auto;
+    }
+
+   	#app {
+   		margin-left: 12.5%;
+   		margin-right: 12.5%;
+   		height: 75%;
+   		width: auto;
+   	}
